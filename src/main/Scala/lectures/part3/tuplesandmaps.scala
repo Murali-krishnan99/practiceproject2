@@ -1,4 +1,5 @@
 package lectures.part3
+//import scala.util.Random
 
 object tuplesandmaps extends App {
 
@@ -46,11 +47,11 @@ object tuplesandmaps extends App {
   def add(network: Map[String, Set[String]], person: String): Map[String, Set[String]] =
     network + (person -> Set())
 
-  def friend(network: Map[String, Set[String]], a: String, b: String): Map[String, Set[String]] = {
-    val friendsA = network(a)
-    val friendsB = network(b)
-
-    network + (a -> (friendsA + b)) + (b -> (friendsB + b))
+//  def friend(network: Map[String, Set[String]], a: String, b: String): Map[String, Set[String]] = {
+//    val friendsA = network(a)
+//    val friendsB = network(b)
+//
+//    network + (a -> (friendsA + b)) + (b -> (friendsB + a))
 
     def unfriend(network: Map[String, Set[String]], a: String, b: String): Map[String, Set[String]] = {
       val friendsA = network(a)
@@ -71,6 +72,6 @@ object tuplesandmaps extends App {
 
     val empty: Map[String, Set[String]] = Map()
     val network = add(add(empty, "bob"), "Mary")
-    println(network)
-  }
+//    println(network)
+
 }
